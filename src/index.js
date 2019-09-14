@@ -1,18 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
+import "./styles.css";
+import Question from "./Question";
 
 function App() {
-  console.log(1);
-  return <Foo />;
-}
-
-function Foo(props) {
-  console.log(2);
-  const [value, setValue] = useState(0);
-  const handleClick = () => {
-    setValue(value + 1);
-  };
-  return <button onClick={handleClick}>Click Me</button>;
+  return <Question />;
 }
 
 const rootElement = document.getElementById("root");
