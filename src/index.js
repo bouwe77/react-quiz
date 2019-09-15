@@ -1,11 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
-import Question from "./Question";
-
-function App() {
-  return <Question />;
-}
+import App from "./app/App";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);

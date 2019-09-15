@@ -1,3 +1,9 @@
-.answers {
+.choices {
   list-style-type: upper-alpha;
+}
+
+.code {
+  background-color: Black;
+  padding: 5px;
+  margin-top: 10px;
 }
