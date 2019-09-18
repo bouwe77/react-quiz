@@ -23,8 +23,9 @@ export default () => {
       <Header />
       <Question question={questions[currentQuestion]} />
       <div>
-        <button onClick={prevQuestion}>&lt;&lt;</button>
-        <button onClick={nextQuestion}>&gt;&gt;</button>
+        <br />
+        <button onClick={prevQuestion}>&lt;&lt; Previous question</button>
+        <button onClick={nextQuestion}>Next question &gt;&gt;</button>
       </div>
     </>
   );

@@ -4,7 +4,7 @@ export default [
     question: "What about this code yo?",
     code: `const meuk = 1;
 if (meuk === 3) {
-console.log("moio")
+  console.log("moio")
 }`,
     choices: ["Bla", "Boeh", "Bliep"],
     answer: 1
