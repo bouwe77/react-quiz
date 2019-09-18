@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Code from "./Code";
 
-function Question({ question, showAnswer }) {
+function Question({ question }) {
+  const [showAnswer, setShowAnswer] = useState(false);
+
+  function toggleAnswer() {
+    setShowAnswer(!showAnswer);
+  }
+
   return (
     <>
       <div>{question.question}</div>
@@ -10,10 +16,21 @@ function Question({ question, showAnswer }) {
       </div>
       <div>
         <ul className="choices">
-          {question.choices.map(choice => (
-            <li key={choice}>{choice}</li>
+          {question.choices.map((choice, index) => (
+            <li key={choice}>
+              <span
+                style={{
+                  backgroundColor: showAnswer && index === question.answer ? "Green" : ""
+                }}
+              >
+                {choice}
+              </span>
+            </li>
           ))}
         </ul>
+      </div>
+      <div>
+        <button onClick={toggleAnswer}>{showAnswer ? "Hide" : "Show"} Answer</button>
       </div>
     </>
   );
