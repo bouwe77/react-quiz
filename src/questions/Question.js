@@ -29,6 +29,7 @@ function Question({ question }) {
           ))}
         </ul>
       </div>
+      {showAnswer ? <div>Explanation: {question.explanation}</div> : null}
       <div>
         <button onClick={toggleAnswer}>{showAnswer ? "Hide" : "Show"} Answer</button>
       </div>
